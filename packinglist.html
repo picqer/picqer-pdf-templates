@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body class="packinglist-pdf">
+
+    <div id="header">
+        <div class="barcode-picklist"><img src="example.png"></div>
+        <div class="document-title">Packing list {picklistid}</div>
+    </div>
+
+    <div id="footer">
+        <div class="page-number"></div>
+    </div>
+
+    <div id="background"><img src="example-background.png"></div>
+
+    <div id="document">
+        <div id="documenthead">
+            <div id="metadata">
+                <table>
+                    <tr class="metadata-packinglistid">
+                        <th>Packing list</th>
+                        <td>{picklistid}</td>
+                    </tr>
+                    <tr class="metadata-orderid">
+                        <th>Order</th>
+                        <td>{orderid}</td>
+                    </tr>
+                    <tr class="metadata-customerid">
+                        <th>Customer ID</th>
+                        <td>{customerid}</td>
+                    </tr>
+                    <tr class="metadata-packinglistdate">
+                        <th>Date</th>
+                        <td>01-01-2016</td>
+                    </tr>
+                    <tr class="metadata-reference">
+                        <th>Reference</th>
+                        <td>{reference}</td>
+                    </tr>
+                    <tr class="metadata-custom-orderfield-name">
+                        <th>{orderfield-name}</th>
+                        <td>{orderfield-value}</td>
+                    </tr>
+                    <tr class="metadata-custom-orderfield-name2">
+                        <th>{orderfield-name2}</th>
+                        <td>{orderfield-value}</td>
+                    </tr>
+                </table>
+              </div>
+              <div id="address">
+                  Example company B.V.<br>
+                  Dorpsstraat 21<br>
+                  3928 AM Utrecht<br>
+                  Nederland<br>
+                  <span class="address-email">{emailaddress}</span><br>
+                  <span class="address-telephone">{telephone}</span>
+              </div>
+          </div>
+
+          <div class="content">
+              <div class="template-custom-html-start">{template-start-text}</div>
+
+              <div id="products" class="products">
+                  <table>
+                      <thead>
+                      <tr>
+                          <th class="column-productcode">#</th>
+                          <th class="column-name">Name</th>
+                          <th class="right column-delivered">Delivered</th>
+                          <th class="right column-weight">Weight</th>
+                          <th class="right column-price">Total price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="column-productcode">{productcode}</td>
+                            <td class="column-name">
+                                <div class="name">{name}</div>
+                                <div class="description">{remarks}</div>
+                                <div class="product-value">{productfield-title}: {value}}</div>
+                            </td>
+                            <td class="right column-delivered">{amount}</td>
+                            <td class="right column-weight">{weight}</td>
+                            <td class="right column-price">{price}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="2" class="right">Total:</td>
+                        <td class="right column-delivered">{count}</td>
+                        <td class="right column-weight">{weight}</td>
+                        <td class="right column-price">{price}</td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="customer-remarks">
+                <div class="customer-remarks-heading">Customer remarks</div>
+                <div>{remarks}</div>
+            </div>
+
+            <div id="backorders" class="products">
+                <h2>Still in backorder</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th class="column-productcode">#</th>
+                        <th class="column-name">Name</th>
+                        <th class="right column-amount">Amount</th>
+                        <th class="column-orderid">Order</th>
+                        <th class="column-orderdate">Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="column-productcode">{productcode}</td>
+                        <td class="column-name">
+                            <div class="name">{name}</div>
+                            <div class="description">{description}</div>
+                            <div class="product-value">{productfield-title}: {value}}</div>
+                        </td>
+                        <td class="right column-amount">{amount}</td>
+                        <td class="column-orderid">{orderid}</td>
+                        <td class="column-orderdate">01-01-2016</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="template-custom-html-end">{template-end-text}</div>
+        </div>
+    </div>
+</body>
+</html>
