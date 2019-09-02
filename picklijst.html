@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body class="picklist-pdf">
+
+    <div id="header">
+        <div class="barcode-picklist"><img src="example.png"></div>
+        <div class="document-title">Picklist {picklistid}</div>
+    </div>
+
+    <div id="footer">
+        <div class="page-number"></div>
+    </div>
+
+    <div id="background"><img src="example-background.png"></div>
+
+    <div id="document">
+        <div id="documenthead">
+            <div id="metadata">
+                <table>
+                    <tr class="metadata-picklistid">
+                        <th>Picklist</th>
+                        <td>{picklistid}</td>
+                    </tr>
+                    <tr class="metadata-orderid">
+                        <th>Order</th>
+                        <td>{orderid}</td>
+                    </tr>
+                    <tr class="metadata-customerid">
+                        <th>Customer ID</th>
+                        <td>{customerid}</td>
+                    </tr>
+                    <tr class="metadata-warehousename">
+                        <th>Warehouse</th>
+                        <td>{warehousename}</td>
+                    </tr>
+                    <tr class="metadata-picklistdate">
+                        <th>Date</th>
+                        <td>01-01-2016</td>
+                    </tr>
+                    <tr class="metadata-reference">
+                        <th>Reference</th>
+                        <td>{reference}</td>
+                    </tr>
+                    <tr class="metadata-shippingmethod">
+                        <th>Shipping method</th>
+                        <td>{shipping method}</td>
+                    </tr>
+                    <tr class="metadata-tags">
+                        <th>Tags</th>
+                        <td>{tags}</td>
+                    </tr>
+                    <tr class="metadata-custom-orderfield-name">
+                        <th>{orderfield-name}</th>
+                        <td>{orderfield-value}</td>
+                    </tr>
+                    <tr class="metadata-custom-orderfield-name2">
+                        <th>{orderfield-name2}</th>
+                        <td>{orderfield-value}</td>
+                    </tr>
+                </table>
+              </div>
+              <div id="address">
+                  Example company B.V.<br>
+                  Dorpsstraat 21<br>
+                  3928 AM Utrecht<br>
+                  Nederland<br>
+                  <span class="address-email">{emailaddress}</span><br>
+                  <span class="address-telephone">{telephone}</span>
+              </div>
+          </div>
+
+          <div class="content">
+              <div class="template-custom-html-start">{template-start-text}</div>
+
+              <div id="products" class="products">
+                  <table>
+                      <thead>
+                      <tr>
+                          <th class="image column-image"></th>
+                          <th class="column-productcode">Product code</th>
+                          <th class="column-name">Name</th>
+                          <th class="column-location">Location</th>
+                          <th class="right column-amount">Amount</th>
+                          <th class="right column-stock">Stock</th>
+                          <th class="right column-weight">Weight</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="image column-image"><img src="example.jpg" alt="Product image" /></td>
+                            <td class="column-productcode">{productcode}</td>
+                            <td class="column-name">
+                                <div class="name">{name}</div>
+                                <div class="description">{description}</div>
+                                <div class="product-value">{productfield}: {value}</div>
+                            </td>
+                            <td class="column-location">{location}</td>
+                            <td class="right column-amount">{amount}</td>
+                            <td class="right column-stock">{stock}</td>
+                            <td class="right column-weight">{weight}</td>
+                        </tr>
+                        <tr><td colspan="7" class="unlimited-stock-divider">Products with unlimited stock</td></tr>
+                        <tr>
+                            <td class="image column-image"><img src="example.jpg" alt="Product image" /></td>
+                            <td class="column-productcode">{productcode}</td>
+                            <td class="column-name">
+                                <div class="name">{name}</div>
+                                <div class="description">{description}</div>
+                                <div class="product-value">{productfield}: {value}</div>
+                            </td>
+                            <td class="column-location">{location}</td>
+                            <td class="right column-amount">{amount}</td>
+                            <td class="right column-stock"></td>
+                            <td class="right column-weight">{weight}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="4" class="right">Total:</td>
+                        <td class="right column-amount">2</td>
+                        <td class="column-stock">&nbsp;</td>
+                        <td class="right column-weight">{weight}</td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="customer-remarks">
+                <div class="customer-remarks-heading">Customer remarks</div>
+                <div>{remarks}</div>
+            </div>
+
+            <div class="notes">
+                <div class="note">
+                    <div class="note-meta">{name} wrote at {date}</div>
+                    <div class="note-content">{note}</div>
+                </div>
+            </div>
+
+            <div class="template-custom-html-end">{template-end-text}</div>
+        </div>
+    </div>
+</body>
+</html>
