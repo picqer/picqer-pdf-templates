@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body class="order-pdf">
+
+    <div id="header">
+        <div class="document-title">Order confirmation {orderid}</div>
+    </div>
+
+    <div id="footer">
+        <div class="page-number"></div>
+    </div>
+
+    <div id="background"><img src="example-background.png"></div>
+
+    <div id="document">
+        <div id="documenthead">
+            <div id="metadata">
+                <table>
+                    <tr class="metadata-orderdate">
+                        <th>Date</th>
+                        <td>01-01-2019</td>
+                    </tr>
+                    <tr class="metadata-orderid">
+                        <th>Order ID</th>
+                        <td>{orderid}</td>
+                    </tr>
+                    <tr class="metadata-customerid">
+                        <th>Customer ID</th>
+                        <td>{customerid}</td>
+                    </tr>
+                    <tr class="metadata-reference">
+                        <th>Reference</th>
+                        <td>{reference}</td>
+                    </tr>
+                    <tr class="metadata-custom-titleoforderfield">
+                        <th>Orderfield title</th>
+                        <td>{value of orderfield}</td>
+                    </tr>
+                </table>
+              </div>
+              <div id="address">
+                  Example company B.V.<br>
+                  Dorpsstraat 21<br>
+                  3928 AM Utrecht<br>
+                  Nederland<br>
+                  <span class="address-email">{email address}</span>
+              </div>
+          </div>
+
+          <div class="content">
+              <div class="template-custom-html-start">{template-start-text}</div>
+
+              <div id="products" class="products">
+                  <div id="records">
+                      <table>
+                          <thead>
+                          <tr>
+                              <th class="column-productcode">Product code</th>
+                              <th class="column-name">Name</th>
+                              <th class="align-right column-amount">Amount</th>
+                              <th class="align-right column-backorder">Backorder</th>
+                              <th class="align-right column-price">Price</th>
+                              <th class="align-right column-total-price">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="column-productcode">{productcode}</td>
+                                <td class="column-name">
+                                    {name}<br>
+                                    <span class="remarks">{remarks}</span>
+                                </td>
+                                <td class="align-right column-amount">{amount}</td>
+                                <td class="align-right column-backorder amount-backorder">{amount in backorder}</td>
+                                <td class="align-right column-price">{price}</td>
+                                <td class="align-right column-total-price">{total price}</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="5" class="align-right">Subtotal</td>
+                            <td id="totalprice" class="align-right">{total without discount}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="align-right">Discount</td>
+                            <td id="totaldiscount" class="align-right">{total discount}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="align-right">Total</td>
+                            <td id="totaldiscountprice" class="align-right">{total price without vat}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="align-right">{name of vat group}</td>
+                            <td id="vat-21-amount" class="vat-amount align-right">{vat amount}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="align-right">{Total}</td>
+                            <td id="totalvatprice" class="vat-amount align-right">{total price including vat}</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <p class="total-weight">Weight: 1kg</p>
+
+            <div class="customer-remarks">
+                <div class="customer-remarks-heading">Customer remarks</div>
+                <div class="customer-remarks-content">{remarks of customer}</div>
+            </div>
+
+            <div class="template-custom-html-end">{template-end-text}</div>
+        </div>
+    </div>
+</body>
+</html>
