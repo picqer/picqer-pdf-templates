@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+
+<body class="return-pdf">
+    <div id="header">
+        <div class="document-title">Return {returnid}</div>
+    </div>
+    <div id="footer">
+        <div class="page-number"></div>
+    </div>
+    <div id="background"><img src="example-background.png"></div>
+    <div id="document">
+        <div id="documenthead">
+            <div id="metadata">
+                <table>
+                    <tr class="metadata-orderid">
+                        <th>Order</th>
+                        <td>{orderid}</td>
+                    </tr>
+                    <tr class="metadata-customer">
+                        <th>Customer</th>
+                        <td>{customer name}</td>
+                    </tr>
+                    <tr class="metadata-reference">
+                        <th>Reference</th>
+                        <td>{reference}</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="address">
+                Example company B.V.<br>
+                Dorpsstraat 21<br>
+                3928 AM Utrecht<br>
+                Nederland<br>
+                <span class="address-email">{emailaddress}</span><br>
+                <span class="address-telephone">{telephone}</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="template-custom-html-start">{template-start-text}</div>
+            <div class="return-returned-products products return-block">
+                <h2>Returned products</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="column-productcode">Product code</th>
+                            <th class="column-name">Name</th>
+                            <th class="column-amount right">Amount</th>
+                            <th class="column-price right">Price</th>
+                            <th class="column-status">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="column-productcode">{productcode}</td>
+                            <td class="column-name">{name}</td>
+                            <td class="column-amount right">{amount}</td>
+                            <td class="column-price right">{price}</td>
+                            <td class="column-status">{status}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="return-replacement-products products return-block">
+                <h2>Replacement products</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="column-productcode">Product code</th>
+                            <th class="column-name">Name</th>
+                            <th class="column-amount right">Amount</th>
+                            <th class="column-price right">Price</th>
+                            <th class="column-status">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="column-productcode">{productcode}</td>
+                            <td class="column-name">{name}</td>
+                            <td class="column-amount right">{amount}</td>
+                            <td class="column-price right">{price}</td>
+                            <td class="column-status">{status}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="return-totals return-block">
+                <h2>Totals</h2>
+                <table class="vertical-table">
+                    <tbody>
+                        <tr class="return-totals-returning-products">
+                            <th>Returning</th>
+                            <td>{amount} products</td>
+                        </tr>
+                        <tr class="return-totals-replacing-products">
+                            <th>Replacing</th>
+                            <td>{amount} products</td>
+                        </tr>
+                        <tr class="return-totals-days-after-order-shipped">
+                            <th>Days after order shipped</th>
+                            <td>{amount} days</td>
+                        </tr>
+                        <tr class="return-totals-value-returning">
+                            <th>Value returning</th>
+                            <td>{value}</td>
+                        </tr>
+                        <tr class="return-totals-value-replacing">
+                            <th>Value replacing</th>
+                            <td>{value}</td>
+                        </tr>
+                        <tr class="return-totals-value-difference">
+                            <th>Value difference</th>
+                            <td>{value}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="template-custom-html-end">{template-end-text}</div>
+        </div>
+    </div>
+</body>
+
+</html>
