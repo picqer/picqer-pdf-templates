@@ -28,6 +28,10 @@
                         <th>Order</th>
                         <td>{orderid}</td>
                     </tr>
+                    <tr class="metadata-returnid">
+                        <th>Return</th>
+                        <td>{returnid}</td>
+                    </tr>
                     <tr class="metadata-customerid">
                         <th>Customer ID</th>
                         <td>{customerid}</td>
@@ -47,6 +51,10 @@
                     <tr class="metadata-shippingmethod">
                         <th>Shipping method</th>
                         <td>{shipping method}</td>
+                    </tr>
+                    <tr class="metadata-preferred-delivery-date">
+                        <th>Reference</th>
+                        <td>02-01-2016</td>
                     </tr>
                     <tr class="metadata-tags">
                         <th>Tags</th>
@@ -80,10 +88,10 @@
                       <thead>
                       <tr>
                           <th class="image column-image"></th>
+                          <th class="column-amount column-amount-to-pick">Amount</th>
                           <th class="column-productcode">Product code</th>
                           <th class="column-name">Name</th>
                           <th class="column-location">Location</th>
-                          <th class="right column-amount">Amount</th>
                           <th class="right column-stock">Stock</th>
                           <th class="right column-weight">Weight</th>
                     </tr>
@@ -91,37 +99,54 @@
                     <tbody>
                         <tr>
                             <td class="image column-image"><img src="example.jpg" alt="Product image" /></td>
+                            <td class="column-amount column-amount-to-pick">{amount}</td>
                             <td class="column-productcode">{productcode}</td>
                             <td class="column-name">
                                 <div class="name">{name}</div>
                                 <div class="description">{description}</div>
                                 <div class="product-value">{productfield}: {value}</div>
                             </td>
-                            <td class="column-location">{location}</td>
-                            <td class="right column-amount">{amount}</td>
+                            <td class="column-location">
+                                <div class="picklist-pdf-product-location">
+                                    <span class="picklist-pdf-product-location amount">5</span>
+                                    <span class="picklist-pdf-product-location-infix">x</span>
+                                    <span class="picklist-pdf-product-location-names">
+                                        <span class="picklist-pdf-product-location-name">A.4.B.2</span>
+                                    </span>
+                                </div>
+                            </td>
                             <td class="right column-stock">{stock}</td>
                             <td class="right column-weight">{weight}</td>
                         </tr>
                         <tr><td colspan="7" class="unlimited-stock-divider">Products with unlimited stock</td></tr>
                         <tr>
                             <td class="image column-image"><img src="example.jpg" alt="Product image" /></td>
+                            <td class="column-amount column-amount-to-pick">{amount}</td>
                             <td class="column-productcode">{productcode}</td>
                             <td class="column-name">
                                 <div class="name">{name}</div>
                                 <div class="description">{description}</div>
                                 <div class="product-value">{productfield}: {value}</div>
                             </td>
-                            <td class="column-location">{location}</td>
-                            <td class="right column-amount">{amount}</td>
+                            <td class="column-location">
+                                <div class="picklist-pdf-product-location">
+                                    <span class="picklist-pdf-product-location amount">5</span>
+                                    <span class="picklist-pdf-product-location-infix">x</span>
+                                    <span class="picklist-pdf-product-location-names">
+                                        <span class="picklist-pdf-product-location-name">A.4.B.2</span>
+                                    </span>
+                                </div>
+                            </td>
                             <td class="right column-stock"></td>
                             <td class="right column-weight">{weight}</td>
                         </tr>
                     </tbody>
                     <tfoot>
                     <tr>
-                        <td colspan="4" class="right">Total:</td>
-                        <td class="right column-amount">2</td>
-                        <td class="column-stock">&nbsp;</td>
+                        <td></td>
+                        <td class="column-amount column-amount-to-pick">{product count}</td>
+                        <td colspan="4">Total:</td>
+                        <td class="column-stock"></td>
                         <td class="right column-weight">{weight}</td>
                     </tr>
                     </tfoot>
@@ -132,7 +157,11 @@
                 <h2>Assembled products **</h2>
                 <div class="product-details"></div>
                 <div class="assembled-product">
-                    <div class="product-details"></div>
+                    <div class="product-details">
+                        <div class="amount"></div>
+                        <div class="productcode"></div>
+                        <div class="name"></div>
+                    </div>
                     <div class="child-products"></div>
                 </div>
             </div>

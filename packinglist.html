@@ -40,6 +40,10 @@
                         <th>Reference</th>
                         <td>{reference}</td>
                     </tr>
+                    <tr class="metadata-preferred-delivery-date">
+                        <th>Reference</th>
+                        <td>02-01-2016</td>
+                    </tr>
                     <tr class="metadata-custom-orderfield-name">
                         <th>{orderfield-name}</th>
                         <td>{orderfield-value}</td>
@@ -70,7 +74,6 @@
                           <th class="column-productcode">#</th>
                           <th class="column-name">Name</th>
                           <th class="right column-delivered">Delivered</th>
-                          <th class="right column-weight">Weight</th>
                           <th class="right column-price">Total price</th>
                     </tr>
                     </thead>
@@ -83,7 +86,6 @@
                                 <div class="product-value">{productfield-title}: {value}}</div>
                             </td>
                             <td class="right column-delivered">{amount}</td>
-                            <td class="right column-weight">{weight}</td>
                             <td class="right column-price">{price}</td>
                         </tr>
                     </tbody>
@@ -91,7 +93,6 @@
                     <tr>
                         <td colspan="2" class="right">Total:</td>
                         <td class="right column-delivered">{count}</td>
-                        <td class="right column-weight">{weight}</td>
                         <td class="right column-price">{price}</td>
                     </tr>
                     </tfoot>
